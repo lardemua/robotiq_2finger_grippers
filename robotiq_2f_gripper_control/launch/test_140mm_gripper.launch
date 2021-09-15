@@ -1,6 +1,6 @@
 <!-- Launch file for Segway platform startup -->
 <launch>
-    <arg name="sim" default="false"/>
+    <arg name="sim" default="true"/>
     <arg name="comport" default="/dev/ttyUSB0" unless="$(arg sim)"/> 
     <arg name="baud" default="115200" unless="$(arg sim)"/> 
 
