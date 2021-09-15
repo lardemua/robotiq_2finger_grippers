@@ -15,10 +15,10 @@
     </include>
 
     <!-- Launch action client example  -->
-    <node pkg="robotiq_2f_gripper_control" type="robotiq_2f_action_client_example.py" 
-        name="robotiq_140_client" output="screen">
-        <param name="action_name" value="command_robotiq_action" />
-    </node>
+<!--    <node pkg="robotiq_2f_gripper_control" type="robotiq_2f_action_client_example.py" -->
+<!--        name="robotiq_140_client" output="screen">-->
+<!--        <param name="action_name" value="command_robotiq_action" />-->
+<!--    </node>-->
 
     <param name="robot_description" command="$(find xacro)/xacro $(find robotiq_2f_140_gripper_visualization)/urdf/robotiq_arg2f_140_model.xacro" />  
 
@@ -27,10 +27,10 @@
         <param name="publish_frequency" type="double" value="100.0" />
     </node>
 
-    <node name="gripper_joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-        <rosparam param="source_list">[/joint_states]</rosparam>
-        <rosparam param="use_gui">false</rosparam>
-    </node>
+<!--    <node name="gripper_joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui">-->
+<!--        <rosparam param="source_list">[/joint_states]</rosparam>-->
+<!--&lt;!&ndash;        <rosparam param="use_gui">true</rosparam>&ndash;&gt;-->
+<!--    </node>-->
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robotiq_2f_140_gripper_visualization)/visualize.rviz" required="true" />
 </launch>
